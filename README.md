@@ -32,7 +32,7 @@ for (int i = 0; i < N; i++) {
 // Convert the float values to BFloat16 values
 BFloat16[] bfloats = new BFloat16[N];
 for (int i = 0; i < N; i++) {
-    bfloats[i] = BFloat16.CreateTruncating(floats[i]);
+    bfloats[i] = (BFloat16)floats[i];
 }
 
 // Print the float and BFloat16 values
