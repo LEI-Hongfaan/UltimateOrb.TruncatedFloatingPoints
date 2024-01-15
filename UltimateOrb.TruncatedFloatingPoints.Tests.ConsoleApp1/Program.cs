@@ -7,65 +7,6 @@ namespace UltimateOrb.TruncatedFloatingPoints.Tests.ConsoleApp1 {
     internal class Program {
 
         static void Main(string[] args) {
-
-
-            {
-                // Define some constants
-                const int N = 10; // Number of elements to generate
-                const float MIN = -10f; // Minimum value
-                const float MAX = 10f; // Maximum value
-
-                // Create a random number generator
-                Random rng = new Random();
-
-                // Generate some random float values in the range [MIN, MAX]
-                float[] floats = new float[N];
-                for (int i = 0; i < N; i++) {
-                    floats[i] = (float)rng.NextDouble() * (MAX - MIN) + MIN;
-                }
-
-                // Convert the float values to BFloat16 values
-                BFloat16[] bfloats = new BFloat16[N];
-                for (int i = 0; i < N; i++) {
-                    bfloats[i] = BFloat16.CreateTruncating(floats[i]);
-                }
-
-                // Print the float and BFloat16 values
-                Console.WriteLine("Float values:");
-                foreach (float f in floats) {
-                    Console.WriteLine(f);
-                }
-                Console.WriteLine();
-
-                Console.WriteLine("BFloat16 values:");
-                foreach (BFloat16 b in bfloats) {
-                    Console.WriteLine(b);
-                }
-                Console.WriteLine();
-
-                // Perform some arithmetic operations on the BFloat16 values
-                BFloat16 sum = (BFloat16)0F;
-                BFloat16 product = (BFloat16)1F;
-                BFloat16 min = BFloat16.MaxValue;
-                BFloat16 max = BFloat16.MinValue;
-
-                for (int i = 0; i < N; i++) {
-                    sum += bfloats[i];
-                    product *= bfloats[i];
-                    min = BFloat16.Min(min, bfloats[i]);
-                    max = BFloat16.Max(max, bfloats[i]);
-                }
-
-                // Print the results
-                Console.WriteLine("Sum: " + sum);
-                Console.WriteLine("Product: " + product);
-                Console.WriteLine("Min: " + min);
-                Console.WriteLine("Max: " + max);
-                Console.WriteLine();
-            }
-
-
-
             Console.WriteLine($@"{BFloat16.E}");
             Console.WriteLine($@"{BFloat16.Pi}");
             Console.WriteLine($@"{BFloat16.Tau}");
@@ -82,8 +23,6 @@ namespace UltimateOrb.TruncatedFloatingPoints.Tests.ConsoleApp1 {
             } catch (ArithmeticException ex) {
                 Console.WriteLine(ex.Message);
             }
-
-            Console.WriteLine($@"{BitConverter.UInt32BitsToSingle(0B01111111_01111111_10000000_00000000U):R}");
 
             Console.WriteLine($@"{BitConverter.UInt32BitsToSingle(0B01111111_01111111_10000000_00000000U):R}");
 
