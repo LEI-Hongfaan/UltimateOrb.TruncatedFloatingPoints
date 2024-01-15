@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+		<RootNamespace />
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Title>UltimateOrb.TruncatedFloatingPoints</Title>
+		<Authors>LEI Hongfaan</Authors>
+		<AssemblyVersion>0.1.0</AssemblyVersion>
+		<FileVersion>0.1.0.0</FileVersion>
+		<Version>0.1.0</Version>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<Copyright>Copyright 2024 LEI Hongfaan.</Copyright>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageProjectUrl>https://github.com/LEI-Hongfaan/UltimateOrb.TruncatedFloatingPoints</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/LEI-Hongfaan/UltimateOrb.TruncatedFloatingPoints</RepositoryUrl>
+		<Description>Provides the BFloat16 type and friends.</Description>
+		<PackageTags>BFloat16;Numeric;Floating-Point</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
